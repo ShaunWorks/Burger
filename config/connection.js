@@ -1,9 +1,9 @@
-var keys = require("../keys.js");
+// var keys = require("../keys.js");
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: keys.sqlPass,
+  password: process.env.SQL_PASS,
   database: 'burgers_db'
 });
 
